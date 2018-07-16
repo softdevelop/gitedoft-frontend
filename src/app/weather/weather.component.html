@@ -1,0 +1,17 @@
+<li class="list-group-item" id="city-title" >
+<a href="" [routerLink]="['/weather',weather.woeid]">
+	{{weather.title}} <img src="https://www.metaweather.com/static/img/weather/{{weather.consolidated_weather[0].weather_state_abbr}}.svg" alt="" width="40">
+	</a>
+</li>
+<li class="list-group-item">
+	The temperature: {{weather.consolidated_weather[0].the_temp.toFixed(2)}}
+</li>
+<li class="list-group-item">
+	The maximum temperature: {{weather.consolidated_weather[0].max_temp.toFixed(2)}}
+</li>
+<li class="list-group-item">
+	The the minimum temperature: {{weather.consolidated_weather[0].min_temp.toFixed(2)}}
+</li>
+<li class="list-group-item">
+	Icon :<img src="https://www.metaweather.com/static/img/weather/{{weather.consolidated_weather[0].weather_state_abbr}}.svg" alt="" width="40">
+</li>

@@ -1,0 +1,15 @@
+<h1> Weathers: </h1>
+<div class="form-group">
+	<input [(ngModel)]="query" name="search" class="form-control" placeholder="Search in here" (keyup.enter)="onEnterSearch()" >
+</div>
+<div *ngIf="weathers$">
+	<ul class="list-group" *ngFor="let weather of weathers$">
+		<weather [weather]="weather"></weather>
+	</ul>
+</div>
+<div *ngIf="!weathers$">
+	loading...
+</div>	
+
+		
+		

@@ -1,0 +1,9 @@
+<ul *ngFor="let weather of weathers$.consolidated_weather">
+	<div *ngFor="let key of weather | keys">
+		<li class="list-group-item" id="{{key=='id'?'id-title':''}}" 
+		
+		>
+			{{key}} : {{weather[key]}}
+		</li>
+	</div>
+</ul>
